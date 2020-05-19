@@ -60,7 +60,7 @@
    DB_PASS = "your-password"
    DB_NAME = "your-database"
    PRIVATE_KEY = "your-private-key"
-   URL = "http://localhost:1000/" (example)
+   URL = "http://localhost:3000/" (example)
    ```
 
 5. Run
@@ -68,7 +68,10 @@
    $ npm start
    ```
 ----
+## Related Project
 
+- [`VueJs-Library`](https://github.com/bagakibadi/VueJs-Library)
+----
 ### License
 ----
 
