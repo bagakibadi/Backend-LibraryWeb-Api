@@ -35,7 +35,6 @@
 +---app.js
 ```
 ## How to Install
-----
 
 1. Clone this repository
 
@@ -67,11 +66,11 @@
    ```
    $ npm start
    ```
-----
+
 ## Related Project
 
 - [`VueJs-Library`](https://github.com/bagakibadi/VueJs-Library)
-----
+
 ### License
 ----
 
