@@ -46,9 +46,7 @@ module.exports = {
                 console.log(result)
                 result.email = data.email
                 const newresult = result;
-                const token = jwt.sign({id: result.insertId ,email: result.email}, process.env.SECRET_KEY);
-                const extraxt = jwt.verify(token, process.env.SECRET_KEY);
-                console.log(extraxt);
+                const token = jwt.sign({id: result.insertId ,email: result.email}, process.env.SECRET_KEY)
                 newresult.token = token
                 const transporter = nodemailer.createTransport({
                     service: 'gmail',
@@ -59,9 +57,9 @@ module.exports = {
                 });
                 const mailFrom = {
                     from: 'ivan.putra.13.13.13@gmail.com',
-                    to: extraxt.email,
-                    subject: 'Activation Email',
-                    html: '<a href="http://localhost:8080/#/auth?activated=' + token+'">Click Here</a>',
+                    to: 'solaybagus5@gmail.com',
+                    subject: 'aa',
+                    html: '<p>Click<a href="http://localhost:8080/#/auth?activated=' + token+'">here</a></p>',
                 };
                 transporter.sendMail(mailFrom, (err, info) => {
                     if (err) {
@@ -69,8 +67,8 @@ module.exports = {
                         res.send('Email Activation Failed!')
                     } else {
                         const result = {
-                            token: extraxt,
-                            status: 'success'
+                            token: tokenactivate,
+                            status: 'succes'
                         };
                         MiscHelper.response(res,result,200)
                     }

@@ -44,16 +44,5 @@ module.exports = {
                 }
             })
         })
-    },
-    loanDetail: (id) => {
-        return new Promise((resolve, reject) => {
-            connection.query("SELECT loan.*,book.title,book.author,user.fullname,user.email FROM loan INNER JOIN book ON loan.id_book = book.id INNER JOIN user ON loan.id_user = user.id WHERE id_user = ?", id, (err, result) => {
-                if (!err) {
-                    resolve(result)
-                } else {
-                    reject(new Error(err))
-                }
-            })
-        })
-    }
+      },
 }

@@ -40,7 +40,7 @@ module.exports = {
         })
     },
     getPage: (page, total)=> {
-        const dataPage = 6;
+        const dataPage = 5;
         const totalPage = total / dataPage;
         const firstData = dataPage * page - dataPage;
         return new Promise((resolve,reject)=> {
@@ -48,7 +48,7 @@ module.exports = {
             if(!err){
               const allPage = Math.ceil(totalPage);
                 if(page <= allPage){
-                  resolve([ allPage, `${page}`,result])}
+                  resolve([`Total Page: ${allPage}`, `Current Page: ${page}`,result])}
                 } else {
                   reject(new Error(err))
                 }

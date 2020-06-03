@@ -23,7 +23,7 @@ module.exports = {
             id_user,
             id_book,
             borrowed_date: new Date(),
-            status: 'Active',
+            status: 1,
         }
         loanModel.insertLoan(data)
             .then((result) => {

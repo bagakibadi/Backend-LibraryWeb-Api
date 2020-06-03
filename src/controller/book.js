@@ -1,7 +1,7 @@
 const bookModel = require('../models/book');
 const MiscHelper = require('../helpers/helpers');
 const connection = require('../configs/db');
-// const redis = require('redis');
+const redis = require('redis');
 // const client = redis.createClient(process.env.PORT_REDIS);
 
 module.exports = {
@@ -60,18 +60,19 @@ module.exports = {
       created_at: new Date()
     }
     bookModel.insertBook(data)
-      .then((res) => {
-        MiscHelper.response(res, result, 200)
+      .then((result) => {
+        res.send(result);
       })
       .catch(err => console.log(err));
   },
   updateBook: (req, res) => {
     const idBook = req.params.id_book
-    const { title, description, status, author, id_category } = req.body;
+    const { title, description, image, status, author, id_category } = req.body;
     const data = {
       title,
       description,
       author,
+      image,
       status,
       id_category,
       update_at: new Date(),

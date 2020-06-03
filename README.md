@@ -34,8 +34,46 @@
 |    |   +---user.js
 +---app.js
 ```
+## How to Install
+
+1. Clone this repository
+
+   ```
+   $ git clone https://github.com/ichvanul/LibraryWeb-Backend-ExpressJs-NodeJs.git
+   ```
+
+2. Create a database and import file to database sql.
+
+3. Install all depedencies on the package.json
+
+   ```
+   $ npm install
+   ```
+
+4. Create `.env` file with environment variable in line with following:
+
+   ```
+   SERVER_PORT = 1000 (example)
+   DB_HOST = "localhost"
+   DB_USER = "your-user"
+   DB_PASS = "your-password"
+   DB_NAME = "your-database"
+   PRIVATE_KEY = "your-private-key"
+   URL = "http://localhost:3000/" (example)
+   ```
+
+5. Run
+   ```
+   $ npm start
+   ```
+
+## Related Project
+
+- [`VueJs-Library`](https://github.com/bagakibadi/VueJs-Library)
 
 ### License
 ----
 
 © [Bagus Nur Solayman](https://github.com/bagakibadi/)
+
+MyEmail : solaybagus2@gmail.com
